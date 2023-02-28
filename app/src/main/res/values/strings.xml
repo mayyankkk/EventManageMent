@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">EventManageMent</string>
+    <string name="events">Events</string>
+    <string name="discuss_forum">Discuss Forum</string>
+    <string name="event_1">Event 1</string>
+    <string name="event_2">Event 2</string>
+    <string name="event_3">Blind Coding</string>
+    <string name="event_4">Boat Making</string>
+    <string name="event_image">Event Image</string>
+    <string name="textV">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_e_mail">Enter e-mail</string>
+    <string name="enter_the_reg_no">Enter the Reg. No.</string>
+    <string name="enter_team_name_if_applicalble">Enter Team Name(If applicalble)</string>
+    <string name="_2nd_member_s_name">2nd Member\'s Name(if required)</string>
+    <string name="enter_reg_no">Enter Reg NO.</string>
+    <string name="_2nd_member_s_reg_no">2nd Member\'s Reg. No.</string>
+    <string name="_3rd_member_s_name">3rd Member\'s Name(if required)</string>
+    <string name="_3rd_member_s_reg_no">3rd Member\'s Reg. No.</string>
+    <string name="_4th_member_s_name">4th Member\'s Name(if required)</string>
+    <string name="_4th_member_s_reg_no">4th member\'s Reg. No.</string>
+    <string name="enter_college_name">Enter College Name</string>
+    <string name="submit">Submit</string>
+    <string name="discuss">Discuss</string>
+    <string name="register">Register</string>
+    <string name="arduino_effect">Arduino Effect</string>
+    <string name="arduino_effect_text">Welcome to the Arduino Effect event of our College Tech Fest! We are thrilled to offer a unique platform for our student tech enthusiasts to showcase their creativity and skills in the exciting world of electronics and programming.
+
+Our event offers a range of categories to cater to different skill levels, including beginner, intermediate, and advanced. Students can showcase their projects in any of these categories and have the opportunity to win prizes, gain recognition, and build their portfolio.
+
+We believe that our Arduino Effect event is a great way to foster creativity, encourage collaboration, and showcase the talents of our students. We welcome all students who are passionate about Arduino technology to participate in our event and make it a memorable experience for everyone.
+
+Thank you for considering our Arduino Effect event at the College Tech Fest. We look forward to seeing your amazing projects and supporting you in your tech journey.</string>
+    <string name="auto_cad">Auto Cad</string>
+    <string name="auto_cad_text">Design Your Dreams into Reality Our AutoCAD event is a unique opportunity for students to showcase their drafting abilities while competing against their peers. We welcome individual student participants and teams from all backgrounds, and our judges will be looking for teams that demonstrate technical proficiency, creativity, and problem-solving skills.
+In the AutoCAD event, participants will be given a set of design challenges that they must complete using the AutoCAD software. This unique challenge requires participants to think critically, creatively, and efficiently in order to produce high-quality designs. Participants will have access to a wide range of AutoCAD tools and resources to help them complete their designs, and our judges will be looking for participants who can produce accurate and visually appealing designs.
+Whether you\'re a seasoned designer or just getting started, there\'s a place for you at our AutoCAD event. We\'ll have a variety of challenges available for participants to solve, including drafting, modeling, and simulation challenges. Our judges will be looking for participants who can think on their feet, work well under pressure, and come up with creative solutions to complex design problems.
+So, come join us for a day of intense design challenges and fun! Whether you\'re looking to test your skills, meet other student designers, or just have a good time, our AutoCAD event is the perfect opportunity to get involved in the design community and take your skills to the next level.</string>
+    <string name="blind_coding_text">
+        Code Beyond Sight
+
+Welcome to BCE\'s Blind Coding event, part of our annual tech fest! We\'re excited to bring together some of the most talented student coders in the region for an exciting challenge that tests their skills and creativity.
+
+Our Blind Coding event is a unique opportunity for students to showcase their coding abilities while competing against their peers. We welcome individual student participants and teams from all backgrounds, and our judges will be looking for teams that demonstrate technical proficiency, creativity, and problem-solving skills.
+
+In the Blind Coding event, participants will be given a set of programming challenges that they must complete without being able to see their screens. This unique challenge requires participants to think outside the box and rely on their coding knowledge and intuition.
+
+Whether you\'re a seasoned coder or just getting started, there\'s a place for you at our Blind Coding event. We\'ll have a variety of challenges available for participants to solve, including puzzles, algorithms, and code optimization problems. Our judges will be looking for participants who can think on their feet, work well under pressure, and come up with creative solutions to complex problems.
+
+So, come join us for a day of intense coding challenges and fun! Whether you\'re looking to test your skills, meet other student coders, or just have a good time, our Blind Coding event is the perfect opportunity to get involved in the coding community and take your skills to the next level.
+    </string>
+    <string name="boat_making_text">Ahoy there! Are you ready to put your boat-making skills to the test? Join us at Technoriti, the annual tech fest of Bhagalpur College of Engineering, for the exciting Boat Making event!
+
+In this fun and challenging event, participants will design and build a boat from scratch using a variety of materials provided by the organizers. The boats will be judged based on their design, buoyancy, stability, and speed, among other factors. Participants will have to work together as a team to come up with the best design, and then use their engineering skills to bring it to life.
+
+The Boat Making event is a great opportunity for students to showcase their creativity, technical knowledge, and teamwork skills. It also provides a platform for participants to learn from each other and exchange ideas, making it a great learning experience.
+
+The event will take place in a specially designed area, complete with a water tank where participants can test their boats. Judges will evaluate each boat based on a set of criteria, and the winning team will receive a trophy, certificate, and other exciting prizes.
+
+So, if you\'re looking for a fun and exciting way to showcase your boat-making skills and have a great time with your friends, come join us at Technoriti for the Boat Making event!
+</string>
+</resources>

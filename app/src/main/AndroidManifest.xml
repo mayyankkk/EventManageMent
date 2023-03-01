@@ -15,6 +15,18 @@
         android:theme="@style/NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DiscussionForumActivity"
             android:exported="false">
             <meta-data
@@ -45,22 +57,19 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_CxHCRy6vrDFTnO"/>
+            android:value="rzp_test_CxHCRy6vrDFTnO" />
         <meta-data
             android:name="com.google.gms.wallet.api.enabled"
-            android:value="true"/>
+            android:value="true" />
     </application>
 
 </manifest>

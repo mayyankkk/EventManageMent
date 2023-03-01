@@ -22,7 +22,6 @@ class RegistrationForm : AppCompatActivity(), PaymentResultListener {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding
 
         binding.submitBtn.setOnClickListener {
             if (binding.etEmail1.text.toString() != "" && binding.etName1.text.toString() != "" && binding.etCollegeName1.text.toString() != "" && binding.etRegNo1.text.toString() != "") {

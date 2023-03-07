@@ -20,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         if(currentUser != null){
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,7 @@ class SignUpActivity : AppCompatActivity() {
                             val user = auth.currentUser
                             val intent=Intent(this,MainActivity::class.java)
                             startActivity(intent)
+                            finish()
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(baseContext, "Authentication failed.",

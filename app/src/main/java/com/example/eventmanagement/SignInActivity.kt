@@ -20,6 +20,7 @@ class SignInActivity : AppCompatActivity() {
         if(currentUser != null){
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,7 @@ class SignInActivity : AppCompatActivity() {
                             val user = auth.currentUser
                             val intent= Intent(this,MainActivity::class.java)
                             startActivity(intent)
+                            finish()
 
                         } else {
                             // If sign in fails, display a message to the user.

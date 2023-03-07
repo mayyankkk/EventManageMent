@@ -62,4 +62,14 @@ So, if you\'re looking for a fun and exciting way to showcase your boat-making s
     <string name="event_manager">Event Manager</string>
     <string name="icon">Icon</string>
     <string name="to_be_added_soon">To be added soon…</string>
+    <string name="welcome">WELCOME</string>
+    <string name="sign_in_to_continue">SIGN IN TO CONTINUE</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_here_click_me_to_register">New Here? Click me to register</string>
+    <string name="create_password">Create Password</string>
+    <string name="sign_up">Sign UP</string>
+    <string name="new_here">New Here?</string>
+    <string name="sign_up_to_continue">SIGN UP TO CONTINUE</string>
 </resources>

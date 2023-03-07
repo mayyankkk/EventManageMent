@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
         binding=ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
-            val iHome= Intent(this, MainActivity::class.java)
+            val iHome= Intent(this, SignInActivity::class.java)
             startActivity(iHome)
             finish()
         },1500)

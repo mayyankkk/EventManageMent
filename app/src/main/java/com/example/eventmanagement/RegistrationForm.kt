@@ -46,7 +46,6 @@ class RegistrationForm : AppCompatActivity(), PaymentResultListener {
         databaseReference = FirebaseDatabase.getInstance().getReference("Events")
         databaseReference.child(eventName).child(regNo).setValue(eventData)
             .addOnSuccessListener {
-
                 Toast.makeText(this, "You're registered for the $eventName", Toast.LENGTH_LONG)
                     .show()
             }

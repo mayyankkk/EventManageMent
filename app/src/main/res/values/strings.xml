@@ -72,4 +72,5 @@ So, if you\'re looking for a fun and exciting way to showcase your boat-making s
     <string name="sign_up">Sign UP</string>
     <string name="new_here">New Here?</string>
     <string name="sign_up_to_continue">SIGN UP TO CONTINUE</string>
+    <string name="log_out">Log Out</string>
 </resources>

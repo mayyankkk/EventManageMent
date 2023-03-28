@@ -8,9 +8,14 @@ import android.widget.Toast
 import com.example.eventmanagement.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
+    companion object{
+        const val NAME="name"
+        const val EMAIL="email"
+    }
     lateinit var binding : ActivitySignUpBinding
     lateinit var auth: FirebaseAuth
     public override fun onStart() {
@@ -19,6 +24,7 @@ class SignUpActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         if(currentUser != null){
             val intent=Intent(this,MainActivity::class.java)
+
             startActivity(intent)
             finish()
         }
@@ -37,8 +43,8 @@ class SignUpActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
-                            val user = auth.currentUser
                             val intent=Intent(this,MainActivity::class.java)
+
                             startActivity(intent)
                             finish()
                         } else {

@@ -12,12 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.eventsBtn.setOnClickListener {
             val intent = Intent(this, EventList::class.java)
+
             startActivity(intent)
         }
         binding.discussForumBtn.setOnClickListener {
             val intent = Intent(this, DiscussionForumActivity::class.java)
+
             startActivity(intent)
         }
         binding.logOutBtn.setOnClickListener {

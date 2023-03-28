@@ -19,6 +19,7 @@ class SignInActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         if(currentUser != null){
             val intent=Intent(this,MainActivity::class.java)
+
             startActivity(intent)
             finish()
         }
@@ -41,6 +42,7 @@ class SignInActivity : AppCompatActivity() {
 
                             val user = auth.currentUser
                             val intent= Intent(this,MainActivity::class.java)
+
                             startActivity(intent)
                             finish()
 

@@ -17,22 +17,22 @@ class EventDetails : AppCompatActivity() {
         setContentView(binding.root)
         val tag=intent.getStringExtra("KEY")
         when(tag){
-            "1"->{
+            "Arduino Effect"->{
                 binding.eventTxt.setText(R.string.arduino_effect_text)
                 binding.eventImage.setImageResource(R.drawable.arduino)
                 binding.eventName.setText(R.string.arduino_effect)
             }
-            "2"->{
+            "Auto Cad"->{
                 binding.eventImage.setImageResource(R.drawable.autocad)
                 binding.eventName.setText(R.string.auto_cad)
                 binding.eventTxt.setText(R.string.auto_cad_text)
             }
-            "3"->{
+            "Blind Coding"->{
                 binding.eventImage.setImageResource(R.drawable.blinccoding)
                 binding.eventName.setText(R.string.event_3)
                 binding.eventTxt.setText(R.string.blind_coding_text)
             }
-            "4"->{
+            "Boat Making"->{
                 binding.eventName.setText(R.string.event_4)
                 binding.eventImage.setImageResource(R.drawable.boatmaking)
                 binding.eventTxt.setText(R.string.boat_making_text)

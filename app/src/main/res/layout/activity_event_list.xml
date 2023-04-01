@@ -1,54 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B5228FD7"
     tools:context=".EventList">
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/arduinoBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="1"
-            android:text="@string/arduino_effect"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/autocadBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="2"
-            android:text="@string/auto_cad"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/event3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="3"
-            android:text="@string/event_3"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/event4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4"
-            android:text="@string/event_4"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"/>
+</RelativeLayout>

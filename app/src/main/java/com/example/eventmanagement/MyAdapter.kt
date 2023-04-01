@@ -6,11 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+//Adapter for Discussion forum
 class MyAdapter(var messages: ArrayList<MSG>,var context:Activity) :RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val hName= itemView.findViewById<TextView>(R.id.name)
-        val hMsg= itemView.findViewById<TextView>(R.id.msg)
+        val hName: TextView
+        val hMsg: TextView
+        init {
+            hName=itemView.findViewById(R.id.name)
+            hMsg=itemView.findViewById(R.id.msg)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

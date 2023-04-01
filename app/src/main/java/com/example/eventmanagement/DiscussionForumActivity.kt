@@ -17,6 +17,7 @@ class DiscussionForumActivity : AppCompatActivity() {
     private lateinit var binding:ActivityDiscussionForumBinding
     lateinit var messages: ArrayList<MSG>
     private lateinit var myAdapter:MyAdapter
+    private lateinit var databaseReference:DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityDiscussionForumBinding.inflate(layoutInflater)
@@ -24,39 +25,51 @@ class DiscussionForumActivity : AppCompatActivity() {
         val email=Firebase.auth.currentUser?.email.toString()
         val user= email.dropLast(10)
         Log.i("MAYANK",user)
-        binding.send.setOnClickListener {
-            if(binding.etmessage.text.toString()!=""){
-                val msg=MSG(user,binding.etmessage.text.toString())
-                FirebaseDatabase.getInstance().reference.child("Messages").push().setValue(msg)
-            }
-            binding.etmessage.text.clear()
-        }
 
-        binding.recyclerViewDiscuss.layoutManager=LinearLayoutManager(this)
-        messages= arrayListOf<MSG>()
+        databaseReference=FirebaseDatabase.getInstance().reference.child("Messages")
 
-        val databaseReference=FirebaseDatabase.getInstance().reference.child("Messages")
-        databaseReference.addValueEventListener(object :ValueEventListener{
+
+        messages= arrayListOf()
+
+
+
+        databaseReference.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                Log.i("Mayank",snapshot.toString())
                 messages.clear()
                 for(index in snapshot.children){
-                    val n=index.child("name").value
-                    val s=index.child("msg").value
-                    if(n!=null && s!=null){
-                        val msg=MSG(n.toString(),s.toString())
-                        messages.add(msg)
-                    }
+                    val msg= MSG(index.child("name").value.toString(),index.child("msg").value.toString())
+                    Log.i("Mayank",msg.toString())
+                    messages.add(msg)
+
                 }
+                binding.etmessage.text.clear()
             }
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-        })
 
-         myAdapter= MyAdapter(messages,this)
+        })
+        binding.recyclerViewDiscuss.layoutManager=LinearLayoutManager(this)
+        myAdapter= MyAdapter(messages,this@DiscussionForumActivity)
         binding.recyclerViewDiscuss.adapter=myAdapter
 
 
+        binding.send.setOnClickListener {
+            if(binding.etmessage.text.toString()!=""){
+                val msg=MSG(user,binding.etmessage.text.toString())
+                writeNewMessage(msg)
+            }
+
+        }
+
+
+
+
     }
+
+     private fun writeNewMessage(msg:MSG){
+         databaseReference.push().setValue(msg)
+     }
 }

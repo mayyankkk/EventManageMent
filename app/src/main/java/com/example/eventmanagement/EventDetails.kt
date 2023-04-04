@@ -57,7 +57,7 @@ class EventDetails : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.e("Database Erron",error.details)
+                Log.e("Database Error",error.details)
             }
 
         })

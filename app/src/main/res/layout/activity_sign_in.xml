@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#B5228FD7"
     android:padding="10dp"
+
     tools:context=".SignInActivity">
 
     <TextView

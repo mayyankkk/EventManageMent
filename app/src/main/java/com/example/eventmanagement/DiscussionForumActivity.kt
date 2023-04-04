@@ -67,6 +67,7 @@ class DiscussionForumActivity : AppCompatActivity() {
 
         })
         binding.recyclerViewDiscuss.layoutManager=LinearLayoutManager(this)
+        (binding.recyclerViewDiscuss.layoutManager as LinearLayoutManager).stackFromEnd = true;
         myAdapter= MyAdapter(messages,this@DiscussionForumActivity)
         binding.recyclerViewDiscuss.adapter=myAdapter
 
@@ -76,6 +77,7 @@ class DiscussionForumActivity : AppCompatActivity() {
                 val msg=MSG(user,binding.etmessage.text.toString())
                 writeNewMessage(msg)
             }
+            binding.recyclerViewDiscuss.smoothScrollToPosition(myAdapter.itemCount)
 
         }
 

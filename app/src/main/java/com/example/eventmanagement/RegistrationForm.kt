@@ -17,7 +17,7 @@ const val TAG = "MAYANK"
 class RegistrationForm : AppCompatActivity(), PaymentResultListener {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var binding: ActivityRegistrationFormBinding
-    lateinit var eventName: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationFormBinding.inflate(layoutInflater)
@@ -33,12 +33,7 @@ class RegistrationForm : AppCompatActivity(), PaymentResultListener {
     }
 
     private fun saveInFirebase() {
-        when (intent.getStringExtra(KEY1)) {
-            "1" -> eventName = "Arduino Effect"
-            "2" -> eventName = "Auto Cad"
-            "3" -> eventName = "Blind Coding"
-            "4" -> eventName = "Boat Making"
-        }
+        val eventName= intent.getStringExtra(KEY1).toString()
         val name = binding.etName1.text.toString()
         val regNo = binding.etRegNo1.text.toString().trim()
         val collegeName = binding.etCollegeName1.text.toString()
@@ -62,9 +57,9 @@ class RegistrationForm : AppCompatActivity(), PaymentResultListener {
             options.put("description", "Pay 500")
             //You can omit the image option to fetch the image from the dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg")
-            options.put("theme.color", "#3399cc");
-            options.put("currency", "INR");
-            options.put("amount", "500")//pass amount in currency subunits
+            options.put("theme.color", "#3399cc")
+            options.put("currency", "INR")
+            options.put("amount", "5000")//pass amount in currency subunits
             val prefill = JSONObject()
             prefill.put("email", "")
             prefill.put("contact", "")
@@ -78,29 +73,10 @@ class RegistrationForm : AppCompatActivity(), PaymentResultListener {
 
     override fun onPaymentSuccess(p0: String?) {
         Toast.makeText(this, "Payment Success!", Toast.LENGTH_LONG).show()
-        when (intent.getStringExtra(KEY1)) {
-            "1" -> eventName = "Arduino Effect"
-            "2" -> eventName = "Auto Cad"
-            "3" -> eventName = "Blind Coding"
-            "4" -> eventName = "Boat Making"
-        }
-        val name = binding.etName1.text.toString()
-        val regNo = binding.etRegNo1.text.toString()
-        val collegeName = binding.etCollegeName1.text.toString()
-        val eventData = EventData(eventName, name, collegeName, regNo)
-        databaseReference = FirebaseDatabase.getInstance().getReference("Events")
-        databaseReference.child(eventName).child(regNo).setValue(eventData)
-            .addOnSuccessListener {
-                Toast.makeText(this, "You're registered for the $eventName", Toast.LENGTH_LONG)
-                    .show()
-            }
-            .addOnFailureListener {
-                Log.d(TAG, "some error occurred")
-            }
+        saveInFirebase()
     }
 
     override fun onPaymentError(p0: Int, p1: String?) {
         Toast.makeText(this, "Payment Failed", Toast.LENGTH_LONG).show()
-        val tag = intent.getStringExtra(KEY1)
     }
 }

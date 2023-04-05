@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.eventmanagement.databinding.ActivityMainBinding
+
 import com.example.eventmanagement.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
         binding=ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
-            val iHome= Intent(this, SignInActivity::class.java)
+            val iHome= Intent(this, StartActivity::class.java)
             startActivity(iHome)
             finish()
         },1500)

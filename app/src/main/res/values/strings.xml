@@ -43,4 +43,15 @@
     <string name="discuss_anything">Discuss anything…</string>
     <string name="name">Name:</string>
     <string name="please_wait">Please Wait…</string>
+    <string name="for_admin">for Admin</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="user_side">User Side</string>
+    <string name="admin_side">Admin Side</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="registrations">Registrations</string>
+    <string name="event_list">Event List</string>
+    <string name="add_events">Add Events</string>
+    <string name="update_events">Update Events</string>
+    <string name="delete_events">Delete Events</string>
 </resources>

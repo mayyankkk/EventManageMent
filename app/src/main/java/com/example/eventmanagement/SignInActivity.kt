@@ -3,7 +3,7 @@ package com.example.eventmanagement
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+
 import android.widget.Toast
 import com.example.eventmanagement.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -59,6 +59,10 @@ class SignInActivity : AppCompatActivity() {
         }
         binding.tvSignUp.setOnClickListener {
             val intent= Intent(this,SignUpActivity::class.java)
+            startActivity(intent)
+        }
+        binding.adminBtn.setOnClickListener {
+            val intent= Intent(this,AdminLoginActivity::class.java)
             startActivity(intent)
         }
     }

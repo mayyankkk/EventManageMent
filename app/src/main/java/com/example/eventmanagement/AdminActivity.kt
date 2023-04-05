@@ -13,7 +13,9 @@ class AdminActivity : AppCompatActivity() {
         binding= ActivityAdminActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.addEvent.setOnClickListener {  }
+        binding.addEvent.setOnClickListener {
+            startActivity(Intent(this,AddNewEvent::class.java))
+        }
 
         binding.registration.setOnClickListener {  }
 

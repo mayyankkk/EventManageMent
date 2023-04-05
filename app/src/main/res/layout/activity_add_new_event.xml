@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B5228FD7"
+    android:orientation="vertical"
+    tools:context=".AddNewEvent"
+    android:gravity="center">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <EditText
+            android:gravity="center"
+            android:id="@+id/eventName"
+            android:hint="@string/enter_event_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="text"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <EditText
+            android:id="@+id/eventTxt"
+            android:hint="@string/enter_event_text"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="text"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/image"
+        android:scaleType="center"
+        android:visibility="gone"
+        android:src="@drawable/bg"/>
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/uploadImage"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/upload_image"/>
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/submitBtn"
+        android:text="@string/submit"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+</LinearLayout>

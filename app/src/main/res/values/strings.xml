@@ -54,4 +54,8 @@
     <string name="add_events">Add Events</string>
     <string name="update_events">Update Events</string>
     <string name="delete_events">Delete Events</string>
+    <string name="enter_event_name">Enter event name</string>
+    <string name="image">Image</string>
+    <string name="upload_image">upload Image</string>
+    <string name="enter_event_text">Enter event text</string>
 </resources>

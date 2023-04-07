@@ -17,7 +17,9 @@ class AdminActivity : AppCompatActivity() {
             startActivity(Intent(this,AddNewEvent::class.java))
         }
 
-        binding.registration.setOnClickListener {  }
+        binding.registration.setOnClickListener {
+            startActivity(Intent(this,Registration::class.java))
+        }
 
         binding.updateEvent.setOnClickListener {  }
 

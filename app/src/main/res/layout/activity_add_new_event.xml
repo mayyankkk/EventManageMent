@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints="text"
-            android:inputType="text" />
+            android:inputType="textMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
     <ImageView
         android:id="@+id/image"

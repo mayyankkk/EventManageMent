@@ -51,7 +51,7 @@
     <string name="manage_users">Manage Users</string>
     <string name="registrations">Registrations</string>
     <string name="event_list">Event List</string>
-    <string name="add_events">Add Events</string>
+    <string name="add_events">Add/Update Events</string>
     <string name="update_events">Update Events</string>
     <string name="delete_events">Delete Events</string>
     <string name="enter_event_name">Enter event name</string>

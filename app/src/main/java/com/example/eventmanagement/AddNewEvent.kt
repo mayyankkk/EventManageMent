@@ -1,6 +1,8 @@
 package com.example.eventmanagement
 
+import android.app.AlertDialog
 import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -21,28 +23,15 @@ class AddNewEvent : AppCompatActivity() {
     private var imageUri:Uri?=null
     lateinit var db:DatabaseReference
     private var counter:Int=0
+    var flag=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddNewEventBinding.inflate(layoutInflater)
         setContentView(binding.root)
         storageRef=FirebaseStorage.getInstance().reference
-
+        counter=0
         db=FirebaseDatabase.getInstance().reference
-        db.child("Event_List").addValueEventListener(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for(index in snapshot.children){
-                    if(index!=null){
-                        counter++
-                    }
-                }
-                counter++
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                Log.e("ERRROR",error.toString())
-            }
-
-        })
 
         binding.uploadImage.setOnClickListener {
             selectImage()
@@ -50,14 +39,11 @@ class AddNewEvent : AppCompatActivity() {
 
 
         binding.submitBtn.setOnClickListener {
-            if(binding.eventName.text!=null && binding.eventTxt.text!=null && imageUri!=null){
-                showProgressBar()
-                db.child("Event_List").child(counter.toString()).child("name").setValue(binding.eventName.text.toString())
-                db.child("Event_Details").child(binding.eventName.text.toString()).setValue(binding.eventTxt.text.toString())
-                uploadImage(binding.eventName.text.toString())
-            }
-            else{
-                Toast.makeText(this,"Fill carefully", Toast.LENGTH_SHORT).show()
+            val name= binding.eventName.text.trim()
+            val txt=binding.eventTxt.text.trim()
+            if(name!="" && txt!="" && imageUri!=null){
+
+                checkDB(name.toString())
             }
         }
     }
@@ -99,6 +85,54 @@ class AddNewEvent : AppCompatActivity() {
     }
     private fun dismissProgressBar() {
         mProgressDialog?.dismiss()
+    }
+
+
+    private fun submit(){
+        db.child("Event_List").child(counter.toString()).child("name").setValue(binding.eventName.text.toString())
+        db.child("Event_Details").child(binding.eventName.text.toString()).setValue(binding.eventTxt.text.toString())
+        uploadImage(binding.eventName.text.toString())
+        counter=0
+        flag=false
+    }
+
+    private fun showDialog(){
+        val dialog= AlertDialog.Builder(this)
+        dialog.setMessage("Do you want to update the Event?")
+        dialog.setTitle("Alert!")
+        dialog.setPositiveButton("Yes",DialogInterface.OnClickListener{ _, _ ->
+            submit()
+        })
+        dialog.setNegativeButton("No",DialogInterface.OnClickListener{_,_ ->
+            finish()
+        })
+        dialog.show()
+    }
+
+    private fun checkDB(name:String){
+        db.child("Event_List").addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                showProgressBar()
+                for(index in snapshot.children){
+                    counter++
+                    if(index.child("name").value.toString()==name){
+                        showDialog()
+                        flag=true
+                        break
+                    }
+                }
+                if(!flag){
+                    counter++
+                    submit()
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 
 }
